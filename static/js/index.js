@@ -27,15 +27,15 @@ var btn=document.getElementById('btn'), contador=0;
 function cambio()
 {if (contador==0)
 	{
-	message = new Paho.MQTT.Message("Encender");
-	message.destinationName = "israelnoriega1998@hotmail.com/test1";
+	message = new Paho.MQTT.Message("Encendido");
+	message.destinationName = "israelnoriega1998@hotmail.com/tema1";
 	client.send(message);
 	contador=1;
 	}
  else
 	{
 	message = new Paho.MQTT.Message("Apagar");
-	message.destinationName = "israelnoriega1998@hotmail.com/test1";
+	message.destinationName = "israelnoriega1998@hotmail.com/tema1";
 	client.send(message);
 	contador=0;
 	}
@@ -75,9 +75,9 @@ function cambio()
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("israelnoriega1998@hotmail.com/test");
+    client.subscribe("israelnoriega1998@hotmail.com/tema1");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "israelnoriega1998@hotmail.com/test1";
+    message.destinationName = "israelnoriega1998@hotmail.com/tema1";
     client.send(message);
 	
   }
@@ -108,7 +108,7 @@ function cambio()
 	  if(message.payloadString==='Encendido'){
 	  	document.getElementById("btn").innerHTML="Apagar";
 	  } else if(message.payloadString==='Apagado'){
-		document.getElementById("btn").innerHTML="Apagar";
+		document.getElementById("btn").innerHTML="Encendido";
 	  }
   }
 
