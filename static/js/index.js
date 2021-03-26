@@ -62,7 +62,7 @@ function cambio()
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("israelnoriega1998@hotmail.com/test");
+    client.subscribe("israelnoriega1998@hotmail.com/test1");
     message = new Paho.MQTT.Message("hola desde la web");
     message.destinationName = "israelnoriega1998@hotmail.com/test1";
     client.send(message);
