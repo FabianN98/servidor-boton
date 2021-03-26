@@ -86,17 +86,18 @@ function cambio()
     console.log("onMessageArrived:"+message.payloadString);
 	  //comando para poner el sensor desde esp32
 	  document.getElementById("sensor").innerHTML=message.payloadString;
-	  if(message.payloadString==='Encendido'){
+	  if(message.payloadString==='ENCENDER'){
 		 document.getElementById("imagen").src="http://www.clker.com/cliparts/M/h/R/9/8/H/red-led-on-md.png";
-	  } else if(message.payloadString==='Apagado'){
+	  } else if(message.payloadString==='APAGAR'){
 		 document.getElementById("imagen").src="http://www.clker.com/cliparts/D/M/r/s/n/P/led-red-off-md.png";
- 		
+ 	/*	
 	  }
 	  if(message.payloadString==='Encendido'){
 	  	document.getElementById("btn").innerHTML="Apagar";
 	  } else if(message.payloadString==='Apagado'){
 		document.getElementById("btn").innerHTML="Encender";
 	  }
+	  */
   }
 
 
