@@ -86,15 +86,15 @@ function cambio()
     console.log("onMessageArrived:"+message.payloadString);
 	  //comando para poner el sensor desde esp32
 	  document.getElementById("sensor").innerHTML=message.payloadString;
-	  if(message.payloadString==='ENCENDER'){
+	  if(message.payloadString==='Encendido'){
 		
-	  } else if(message.payloadString==='APAGAR'){
+	  } else if(message.payloadString==='Apagado'){
 		
  		
 	  }
-	  if(message.payloadString==='ENCENDER'){
+	  if(message.payloadString==='Encendido'){
 	  	document.getElementById("btn").innerHTML="Apagar";
-	  } else if(message.payloadString==='APAGAR'){
+	  } else if(message.payloadString==='Apagado'){
 		document.getElementById("btn").innerHTML="Encender";
 	  }
 	  
