@@ -111,7 +111,7 @@ function HISTORIAL_LED(){
       console.log("onConnectionLost:"+responseObject.errorMessage);
     }
   }
- // HISTORIAL LED
+ // MENSAJE HISTORIAL LED
  // called when a message arrives
   function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
