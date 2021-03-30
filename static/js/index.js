@@ -111,7 +111,16 @@ function HISTORIAL_LED(){
       console.log("onConnectionLost:"+responseObject.errorMessage);
     }
   }
+ // HISTORIAL LED
+ // called when a message arrives
+  function onMessageArrived(message) {
+    console.log("onMessageArrived:"+message.payloadString);
+	  document.getElementById("sensor").innerHTML=message.payloadString;
+  }
 
+
+// CONTROL DE LED ON OFF
+/*
   // called when a message arrives
   function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
@@ -131,5 +140,5 @@ function HISTORIAL_LED(){
 	  
   }
 
+*/
 
-  
