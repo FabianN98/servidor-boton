@@ -69,7 +69,7 @@ function HISTORIAL_LED(){
   function HISTORIAL_LED(){
      console.log("led on");
 	//document.getElementById("sensor").innerHTML=client.historial;
-	message = new Paho.MQTT.Message("HISTORIAL");
+	message = new Paho.MQTT.Message("ON");
    	message.destinationName = "israelnoriega1998@hotmail.comc/dato_sensor";
     	client.send(message);
 }
