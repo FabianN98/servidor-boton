@@ -44,12 +44,12 @@ function cambio()
 //------------------------------------------------------------------------------------------------------------
 
 // HISTORIAL LED
-
+/*
 function HISTORIAL_LED() {
 	//alert("led on");
 	console.log("led on");
-	document.getElementById("sensor").innerHTML="led on";
-  	message = new Paho.MQTT.Message("ENCENDER");
+	//document.getElementById("sensor").innerHTML="led on";
+  	message = new Paho.MQTT.Message("ON");
         message.destinationName = "israelnoriega1998@hotmail.com/dato_sensor";
         client.send(message);
   
@@ -57,12 +57,19 @@ function HISTORIAL_LED() {
 function HISTORIAL_LED(){	
 	//alert("led off");
 	console.log("led off");
-	document.getElementById("sensor").innerHTML="led off";
-	message = new Paho.MQTT.Message("APAGAR");
+	//document.getElementById("sensor").innerHTML="led off";
+	message = new Paho.MQTT.Message("OFF");
         message.destinationName = "israelnoriega1998@hotmail.com/dato_sensor";
         client.send(message);
  	
 }
+*/
+
+
+  function HISTORIAL_LED(){
+      message = new Paho.MQTT.Message("HISTORIAL");
+      message.destinationName = "israelnoriega1998@hotmail.com/dato_sensor";
+      client.send(message);
 
 
 
